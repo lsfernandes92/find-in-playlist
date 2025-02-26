@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Find in Playlist for YouTube Music",
+  "version": "1.0",
+  "description": "Adds a search input field inside playlists on YouTube Music",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://music.youtube.com/playlist*"],
+      "css": ["styles.css"],
+      "js": ["content/main.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "images/*" ],
+      "matches": [ "*://*.youtube.com/*" ]
+    }
+  ]
+}
